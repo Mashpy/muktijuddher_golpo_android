@@ -47,11 +47,11 @@ public class ListItemAdapter extends BaseAdapter {
         
         HashMap<String, String> sura = new HashMap<String, String>();
         sura = data.get(position);
-        String fontPath = "fonts/arabic.ttf";
+        String fontPath = "fonts/solaimanlipi.ttf";
      
 	     Typeface tf = Typeface.createFromAsset(activity.getAssets(), fontPath);
 	     reciterNameAr.setTypeface(tf);
-        reciterNameAr.setText(" * " + sura.get("nameAr") + " * ");
+        reciterNameAr.setText(" * " + sura.get("nameAr") + "");
     
         return vi;
     }

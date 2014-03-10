@@ -32,10 +32,10 @@ public class StoryDetails extends Activity
 		webview = (WebView) findViewById(R.id.webkit);
 		
 		hadith_details_btn= (TextView)findViewById(R.id.hadith_details_btn);
-		 String fontPath = "fonts/arabic.ttf";
+		 String fontPath = "fonts/solaimanlipi.ttf";
 	     Typeface tf = Typeface.createFromAsset(getAssets(), fontPath);
 	     hadith_details_btn.setTypeface(tf);
-	     hadith_details_btn.setText("رجوع");
+	     hadith_details_btn.setText("ফিরে আসুন");
 		setupUI();
 		
 		hadith_details_btn.setOnClickListener(new View.OnClickListener() {
@@ -54,7 +54,7 @@ public class StoryDetails extends Activity
 
 	private void setupUI() {
 		txtTitle= (TextView)findViewById(R.id.textTitle);
-		 String fontPath = "fonts/arabic.ttf";
+		 String fontPath = "fonts/solaimanlipi.ttf";
 	     Typeface tf = Typeface.createFromAsset(getAssets(), fontPath);
 	     txtTitle.setTypeface(tf);
 		
@@ -64,7 +64,7 @@ public class StoryDetails extends Activity
 
 		
 		selectedIndex = selectedImagePosition;
-		txtTitle.setText("تحميل ...");
+		txtTitle.setText("লোডিং");
 		myHandler.removeCallbacks(mMyRunnable);
 		myHandler.postDelayed(mMyRunnable, 1500);
 		
@@ -81,7 +81,7 @@ public class StoryDetails extends Activity
 	 				webview.loadUrl("file:///android_asset/gdd"+selectedIndex+".html");
 	 				webview.requestFocus();
 	 				webview.setInitialScale(Liberation.zoomFactor);
-	 				txtTitle.setText(" * " + Liberation.Hadiths[selectedIndex+1]+ " * ");
+	 				txtTitle.setText("* " + Liberation.Hadiths[selectedIndex+1]+ "");
 	 			} catch(Exception e)
 	 			{
 	 				

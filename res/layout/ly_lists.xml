@@ -37,10 +37,10 @@
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
             android:paddingLeft="2dp"
-            android:text="mos7af.com"
+            android:text="www.Mashpy.me"
             android:textColor="#04b3d2"
             android:textSize="16dp"
-            android:textStyle="bold" />
+            android:textStyle="normal" />
 
     </RelativeLayout>
   
